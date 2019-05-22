@@ -12,23 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using All_Beated.Show_Pages;
 
 namespace All_Beated.Show_Pages
 {
     /// <summary>
-    /// Interakční logika pro Main_Show_Page.xaml
+    /// Interakční logika pro Main_List_Page.xaml
     /// </summary>
-    public partial class Main_Show_Page : Page
+    public partial class Main_List_Page : Page
     {
-        public Main_Show_Page()
+        public Main_List_Page()
         {
             InitializeComponent();
-        }
-
-        private void Proceed_BT_Click(object sender, RoutedEventArgs e)
-        {
-            FromProceedPage.Content = new Main_List_Page();
         }
     }
 }

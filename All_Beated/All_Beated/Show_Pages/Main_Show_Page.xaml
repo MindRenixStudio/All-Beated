@@ -8,7 +8,7 @@
       d:DesignHeight="650" d:DesignWidth="450"
       Title="Main_Show_Page">
 
-    <Grid Background="White">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="16*"/>
             <ColumnDefinition Width="24*"/>
@@ -18,16 +18,16 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="16*"/>
-            <RowDefinition Height="169*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="13*"/>
+            <RowDefinition Height="179*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="14*"/>
             <RowDefinition Height="19*"/>
             <RowDefinition Height="41*"/>
             <RowDefinition Height="7*"/>
             <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
 
-        <Rectangle VerticalAlignment="Top" Height="518" Grid.RowSpan="6" Grid.ColumnSpan="5">
+        <Rectangle VerticalAlignment="Top" Height="650" Grid.RowSpan="8" Grid.ColumnSpan="5">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF2281D1"/>
@@ -37,12 +37,14 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Button x:Name="Proceed_BT" Background="#eb3200" Content="Proceed" FontFamily="Impact" VerticalAlignment="Bottom" FontSize="30" Height="82" Grid.Row="5" Grid.Column="2"/>
+        <Button x:Name="Proceed_BT" Background="#eb3200" Content="Proceed" FontFamily="Impact" VerticalAlignment="Bottom" FontSize="30" Height="82" Grid.Row="5" Grid.Column="2" Click="Proceed_BT_Click"/>
 
         <Image Source="pack://application:,,,/PicAssets/IntroText.png" RenderTransformOrigin="0.5,0.469" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"/>
 
         <Label Content="#MindRenixStudio" Grid.Column="2" Grid.Row="2" FontSize="30" FontFamily="Impact" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Label Content="Beat all of these f*ckin' games!" Grid.Column="2" Grid.Row="7" FontFamily="Impact" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Beat all of those f*ckin' games!" Grid.Column="2" Grid.Row="7" FontFamily="Impact" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Frame x:Name="FromProceedPage" Grid.ColumnSpan="5" Grid.RowSpan="8"/>
 
     </Grid>
 </Page>
