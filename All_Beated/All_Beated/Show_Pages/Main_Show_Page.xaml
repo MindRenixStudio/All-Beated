@@ -1,0 +1,31 @@
+﻿<Page x:Class="All_Beated.Show_Pages.Main_Show_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:All_Beated.Show_Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="450"
+      Title="Main_Show_Page">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="582*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="All Beated" Background="#000000" Foreground="White" FontSize="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Impact" Grid.ColumnSpan="3"/>
+        <Label Grid.Row="1" Background="#212121" Grid.ColumnSpan="3"/>
+        <Label Grid.Row="2" Background="#484848" Grid.ColumnSpan="3"/>
+
+        <Button x:Name="Option_BT" Content="⚙️" BorderThickness="0" Background="Transparent" Foreground="White" FontSize="35" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="Add_Game_BT" Content="➕" Grid.Column="2" BorderThickness="0" Background="Transparent" Foreground="White" FontSize="35" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label/>
+    </Grid>
+</Page>

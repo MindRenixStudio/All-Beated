@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace All_Beated
+namespace All_Beated.Show_Pages
 {
     /// <summary>
-    /// Interakční logika pro MainWindow.xaml
+    /// Interakční logika pro Main_Show_Page.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main_Show_Page : Page
     {
-        public MainWindow()
+        public Main_Show_Page()
         {
             InitializeComponent();
-
-            From_MainPage.Content = new Main_Show_Page();
         }
     }
 }
