@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using All_Beated;
 
 namespace All_Beated.Show_Pages
 {
@@ -23,6 +24,11 @@ namespace All_Beated.Show_Pages
         public Main_List_Page()
         {
             InitializeComponent();
+        }
+
+        private void AddGame_Click(object sender, RoutedEventArgs e)
+        {
+            FromMainListPage.Content = new Game_Add_Page();
         }
     }
 }

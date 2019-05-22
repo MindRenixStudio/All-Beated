@@ -78,6 +78,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Database_Class_Types\GameWriteType.cs" />
+    <Compile Include="Show_Pages\Game_Add_Page.xaml.cs">
+      <DependentUpon>Game_Add_Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Show_Pages\Main_List_Page.xaml.cs">
       <DependentUpon>Main_List_Page.xaml</DependentUpon>
     </Compile>
@@ -96,6 +100,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Show_Pages\Game_Add_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Show_Pages\Main_List_Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Logic_Part\" />
+    <Folder Include="SavedPictures\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PicAssets\IntroText.png">
