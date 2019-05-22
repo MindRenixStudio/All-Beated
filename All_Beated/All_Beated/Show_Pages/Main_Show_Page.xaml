@@ -10,22 +10,39 @@
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="109*"/>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="11*"/>
-            <RowDefinition Height="582*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="All Beated" Background="#000000" Foreground="White" FontSize="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Impact" Grid.ColumnSpan="3"/>
-        <Label Grid.Row="1" Background="#212121" Grid.ColumnSpan="3"/>
-        <Label Grid.Row="2" Background="#484848" Grid.ColumnSpan="3"/>
+        <Rectangle VerticalAlignment="Top" Height="518" Grid.RowSpan="6" Grid.ColumnSpan="5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" Offset="1"/>
+                    <GradientStop Color="#FF33288B" Offset="0.7"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
 
-        <Button x:Name="Option_BT" Content="⚙️" BorderThickness="0" Background="Transparent" Foreground="White" FontSize="35" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button x:Name="Add_Game_BT" Content="➕" Grid.Column="2" BorderThickness="0" Background="Transparent" Foreground="White" FontSize="35" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label/>
+        <Button x:Name="Proceed_BT" Background="#eb3200" Content="Proceed" FontFamily="Impact" VerticalAlignment="Bottom" FontSize="30" Height="82" Grid.Row="5" Grid.Column="2"/>
+
+        <Image Source="pack://application:,,,/PicAssets/IntroText.png" RenderTransformOrigin="0.5,0.469" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"/>
+
+        <Label Content="#MindRenixStudio" Grid.Column="2" Grid.Row="2" FontSize="30" FontFamily="Impact" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Beat all of these f*ckin' games!" Grid.Column="2" Grid.Row="7" FontFamily="Impact" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
     </Grid>
 </Page>
