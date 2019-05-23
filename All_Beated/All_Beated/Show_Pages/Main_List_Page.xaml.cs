@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using All_Beated;
+using System.IO;
 
 namespace All_Beated.Show_Pages
 {
@@ -28,6 +29,15 @@ namespace All_Beated.Show_Pages
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            if (!Directory.Exists(docPath + "\\MindRenixStudioData"))
+            {
+                Directory.CreateDirectory(docPath + "\\MindRenixStudioData");
+                Directory.CreateDirectory(docPath + "\\MindRenixStudioData\\SavedPictures");
+                Directory.CreateDirectory(docPath + "\\MindRenixStudioData\\Data");
+            }
+
             FromMainListPage.Content = new Game_Add_Page();
         }
     }

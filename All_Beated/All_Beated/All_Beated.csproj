@@ -78,6 +78,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Database_Class_Types\DatabaseConnection.cs" />
     <Compile Include="Database_Class_Types\GameWriteType.cs" />
     <Compile Include="Show_Pages\Game_Add_Page.xaml.cs">
       <DependentUpon>Game_Add_Page.xaml</DependentUpon>

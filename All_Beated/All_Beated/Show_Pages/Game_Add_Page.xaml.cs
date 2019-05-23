@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace All_Beated.Show_Pages
 {
@@ -35,6 +37,36 @@ namespace All_Beated.Show_Pages
             Nullable<bool> result = openFileDialog.ShowDialog();
 
             SelectedPath.Text = openFileDialog.FileName;
+
+            string picturePath = openFileDialog.FileName;
+
+            //File.Copy(picturePath, docPath + "\\MindRenixStudioData\\" + InputName.Text + ".jpg");
+            //string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        }
+
+        private void SaveBTN_Click(object sender, RoutedEventArgs e)
+        {
+            if (OnlyNumberCheck(InputReview.Text) == false)
+            {
+                InputRating.Text = "Only numbers, got it?";
+                InputRatingError.Visibility = Visibility.Visible;
+            }
+            if (OnlyNumberCheck(InputReview.Text) == true)
+            {
+
+            }
+        }
+
+        private bool OnlyNumberCheck(string textToCheck)
+        {
+            if (Regex.IsMatch(textToCheck, @"^\d+$") == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

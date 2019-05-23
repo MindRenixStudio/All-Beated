@@ -39,21 +39,24 @@
 
         <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="30,20,0,0">
             <Label Content="Game name:" Foreground="White" FontFamily="Impact" FontSize="20"/>
-            <TextBox Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
+            <TextBox x:Name="InputName" Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
             <Label Content="Rating (0%-100%):" Foreground="White" FontFamily="Impact" FontSize="20"/>
-            <TextBox Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
+            <TextBox x:Name="InputRating" Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
             <Label Content="Reviw:" Foreground="White" FontFamily="Impact" FontSize="20"/>
-            <TextBox Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
+            <TextBox x:Name="InputReview" Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
             <Label Content="Playtime:" Foreground="White" FontFamily="Impact" FontSize="20"/>
-            <TextBox Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
+            <TextBox x:Name="InputPlaytime" Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
             <Label Content="Positives" Foreground="White" FontFamily="Impact" FontSize="20"/>
-            <TextBox Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
+            <TextBox x:Name="InputPositives" Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
             <Label Content="Negatives:" Foreground="White" FontFamily="Impact" FontSize="20"/>
-            <TextBox Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
+            <TextBox x:Name="InputNegatives" Width="300" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
             <Label Content="Select picture:" Foreground="White" FontFamily="Impact" FontSize="20"/>
             <TextBox x:Name="SelectedPath" Width="150" HorizontalAlignment="Left" Padding="10,00,0,0" FontSize="18" FontFamily="Impact"/>
             <Button x:Name="SelectPicture" Content="Select path" Width="150" Margin="100,-30,-20,0" Background="#eb3200" Click="SelectPicBTN" FontSize="20" FontFamily="Impact"/>
-            <Button x:Name="SaveBTN" Content="SAVE GAME" Background="#eb3200" FontFamily="Impact" FontSize="20" Margin="0,30,0,0"/>
+            <Button x:Name="SaveBTN" Content="SAVE GAME" Background="#eb3200" FontFamily="Impact" FontSize="20" Margin="0,30,0,0" Click="SaveBTN_Click"/>
+
+            <Label x:Name="InputRatingError" Content="!" Margin="323,-810,25,0" Height="34" Background="#eb3200" Foreground="White" FontFamily="Impact" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
         </StackPanel>
 
     </Grid>
