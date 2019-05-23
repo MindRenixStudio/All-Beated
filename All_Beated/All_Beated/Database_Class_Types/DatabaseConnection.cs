@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using SQLite;
 using All_Beated.Database_Class_Types;
+using System.IO;
 
 namespace All_Beated.Database_Class_Types
 {
     class DatabaseConnection
     {
         private SQLiteAsyncConnection databaseConn;
-
+        
         public DatabaseConnection(string databasePath)
         {
             databaseConn = new SQLiteAsyncConnection(databasePath);

@@ -22,9 +22,15 @@ namespace All_Beated.Show_Pages
     /// </summary>
     public partial class Main_List_Page : Page
     {
+        //public string dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "\\MindRenixStudioData\\Data\\game_data.db3");
+        //třeba zde vytvořit databázi 
         public Main_List_Page()
         {
             InitializeComponent();
+
+            string dbPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MindRenixStudioData\\Data\\game_data.db3";
+
+            DBFileCreate(dbPath);
         }
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
@@ -39,6 +45,14 @@ namespace All_Beated.Show_Pages
             }
 
             FromMainListPage.Content = new Game_Add_Page();
+        }
+
+        private void DBFileCreate(string dbPath)
+        {
+            if (File.Exists(dbPath) == false)
+            {
+                File.Create(dbPath + "\\MindRenixStudioData\\Data\\game_data.db3");
+            }
         }
     }
 }

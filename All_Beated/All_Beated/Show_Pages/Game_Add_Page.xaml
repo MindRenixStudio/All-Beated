@@ -56,7 +56,9 @@
             <Button x:Name="SaveBTN" Content="SAVE GAME" Background="#eb3200" FontFamily="Impact" FontSize="20" Margin="0,30,0,0" Click="SaveBTN_Click"/>
 
             <Label x:Name="InputRatingError" Content="!" Margin="323,-810,25,0" Height="34" Background="#eb3200" Foreground="White" FontFamily="Impact" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Visibility="Hidden"/>
-
+            <Label x:Name="InputNameError" Content="!" Margin="323,-950,25,0" Height="34" Background="#eb3200" Foreground="White" FontFamily="Impact" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="InputPlaytimeError" Content="!" Margin="323,-550,25,0" Height="34" Background="#eb3200" Foreground="White" FontFamily="Impact" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            
         </StackPanel>
 
     </Grid>
