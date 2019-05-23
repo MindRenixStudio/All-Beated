@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using All_Beated;
 using System.IO;
+using All_Beated.Database_Class_Types;
 
 namespace All_Beated.Show_Pages
 {
@@ -22,15 +23,26 @@ namespace All_Beated.Show_Pages
     /// </summary>
     public partial class Main_List_Page : Page
     {
-        //public string dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "\\MindRenixStudioData\\Data\\game_data.db3");
-        //třeba zde vytvořit databázi 
+
+        List<GameWriteType> gameWriteList = new List<GameWriteType>();
+
+        string dbPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MindRenixStudioData\\Data\\game_data.db3";
+
         public Main_List_Page()
         {
             InitializeComponent();
 
-            string dbPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MindRenixStudioData\\Data\\game_data.db3";
-
             DBFileCreate(dbPath);
+            ShowGamesInList();
+        }
+
+        private async void ShowGamesInList()
+        {
+            DatabaseConnection database = new DatabaseConnection(dbPath);
+
+            gameWriteList = await database.GetGamesList();
+
+            GamesList.ItemsSource = gameWriteList;
         }
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
@@ -47,11 +59,11 @@ namespace All_Beated.Show_Pages
             FromMainListPage.Content = new Game_Add_Page();
         }
 
-        private void DBFileCreate(string dbPath)
+        private void DBFileCreate(string dbPathF)
         {
-            if (File.Exists(dbPath) == false)
+            if (File.Exists(dbPathF) == false)
             {
-                File.Create(dbPath + "\\MindRenixStudioData\\Data\\game_data.db3");
+                File.Create(dbPathF);
             }
         }
     }

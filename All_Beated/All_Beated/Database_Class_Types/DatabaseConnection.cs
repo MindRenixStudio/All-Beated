@@ -31,5 +31,10 @@ namespace All_Beated.Database_Class_Types
             }
         }
 
+        public Task<List<GameWriteType>> GetGamesList()
+        {
+            return databaseConn.QueryAsync<GameWriteType>("SELECT * FROM GameWriteType ORDER BY ID ASC");
+        }
+
     }
 }

@@ -83,6 +83,9 @@
     <Compile Include="Show_Pages\Game_Add_Page.xaml.cs">
       <DependentUpon>Game_Add_Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Show_Pages\Game_Detail_Page.xaml.cs">
+      <DependentUpon>Game_Detail_Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Show_Pages\Main_List_Page.xaml.cs">
       <DependentUpon>Main_List_Page.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Show_Pages\Game_Add_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Show_Pages\Game_Detail_Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -31,16 +31,10 @@ namespace All_Beated.Show_Pages
         public string negatives;
         public string picturePath;
 
-        
-
-        
-
         public Game_Add_Page()
         {
             InitializeComponent();
-             
-            //string pathToMyDocs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            //string pathToAppRoot = pathToMyDocs + "\\MindRenixStudioData\\Data";
+            
         }
 
         private void SelectPicBTN(object sender, RoutedEventArgs e)
