@@ -37,7 +37,7 @@
         <Button Grid.Column="0" BorderBrush="White" Background="Transparent" Height="Auto" Content="≡" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,5"/>
         <Label Grid.Column="1" Content="All Beated!" Foreground="White" FontFamily="Impact" FontSize="40" Padding="30,0,0,3" Grid.ColumnSpan="3"/>
 
-        <ListView x:Name="GamesList" Width="450" Background="White" Grid.ColumnSpan="4" Grid.RowSpan="3" Grid.Row="1">
+        <ListView x:Name="GamesList" Width="450" Background="White" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Margin="0,0,0,31">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Width="417" Background="White">
@@ -49,9 +49,9 @@
                             <Label Content="|" FontFamily="Impact" FontSize="20" Foreground="Black"/>
                             <Label Content="Playtime:" FontFamily="Impact" FontSize="20" Foreground="Black"/>
                             <Label Content="{Binding PlayTime}" FontFamily="Impact" FontSize="20" Foreground="Black"/>
-                            <Label Content="H" FontFamily="Impact" FontSize="20" Foreground="Black"/>
-                            <Button x:Name="DetailBTN" Content="⋮" Margin="80,-35,0,0" FontFamily="Impact"/>
+                            <Label Content="H" FontFamily="Impact" FontSize="20" Foreground="Black"/>                            
                         </StackPanel>
+                        <Button x:Name="DetailBTN" Content="⋮" Margin="0,-70,20,0" FontFamily="Impact" Click="DetailBTN" HorizontalAlignment="Right"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

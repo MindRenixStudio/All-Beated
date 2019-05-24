@@ -45,6 +45,11 @@ namespace All_Beated.Show_Pages
             GamesList.ItemsSource = gameWriteList;
         }
 
+        private void DetailBTN(object sender, RoutedEventArgs e)
+        {
+            var item = (sender as FrameworkElement).DataContext;
+            int index = GamesList.Items.IndexOf(item);
+        }
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
