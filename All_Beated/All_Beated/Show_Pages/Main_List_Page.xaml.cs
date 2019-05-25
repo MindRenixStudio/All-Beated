@@ -44,11 +44,13 @@ namespace All_Beated.Show_Pages
 
             GamesList.ItemsSource = gameWriteList;
         }
-
         private void DetailBTN(object sender, RoutedEventArgs e)
         {
             var item = (sender as FrameworkElement).DataContext;
-            int index = GamesList.Items.IndexOf(item);
+            int index = GamesList.Items.IndexOf(item) + 1;
+
+            //předání na konkrétní stránku s detaily včetně ID (index)
+            FromMainListPage.Content = new Game_Detail_Page(index);
         }
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
@@ -63,7 +65,6 @@ namespace All_Beated.Show_Pages
 
             FromMainListPage.Content = new Game_Add_Page();
         }
-
         private void DBFileCreate(string dbPathF)
         {
             if (File.Exists(dbPathF) == false)
