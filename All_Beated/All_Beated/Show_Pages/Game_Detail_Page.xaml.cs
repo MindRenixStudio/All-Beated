@@ -56,6 +56,8 @@ namespace All_Beated.Show_Pages
             GameRating.Content = gameDetailsListFinished[2] + "%";
             GamePlaytime.Content = gameDetailsListFinished[3] + "H";
             GameReview.Text = gameDetailsListFinished[4];
+            GamePositives.Text = gameDetailsListFinished[5];
+            GameNegatives.Text = gameDetailsListFinished[6];
         }
 
         private void BackBTN_Click(object sender, RoutedEventArgs e)
